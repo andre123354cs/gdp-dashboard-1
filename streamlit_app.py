@@ -18,7 +18,7 @@ if st.button("Enviar Correo"):
         msg["From"] = remitente
         msg["To"] = destinatario
 
-        with smtplib.SMTP_SSL("smtp.office365.com", 587) as server:
+        with smtplib.SMTP_SSL("smtp.gmail.com", 587) as server:
             server.login(remitente, password)
             server.send_message(msg)
         st.success("¡Correo enviado con éxito!")
